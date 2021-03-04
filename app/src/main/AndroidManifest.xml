@@ -3,6 +3,7 @@
     package="dev.chu.opencv">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -36,15 +37,22 @@
         android:theme="@style/Theme.OpenCV">
 
         <!--  OpenCV JAVA API를 사용하여  전체화면에  카메라 영상을 보여 줄 수 있기 위해 screenOrientation 을 landscape 로 지정 -->
-        <activity android:name=".MainActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="keyboardHidden|orientation">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".OpenCVCameraActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".OpenCVGalleryActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
