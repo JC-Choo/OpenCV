@@ -1,0 +1,5 @@
+# ninja log v5
+1	2741	636547912	CMakeFiles/native-lib.dir/native-lib.cpp.o	be680b5cc4a0af17
+2749	3441	636547913	C:/Users/cnwlc/AndroidProject/OpenCV/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	39cb2b07b953734f
+7	2462	636548295	CMakeFiles/native-lib.dir/native-lib.cpp.o	be680b5cc4a0af17
+2463	2927	636548296	C:/Users/cnwlc/AndroidProject/OpenCV/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	39cb2b07b953734f
