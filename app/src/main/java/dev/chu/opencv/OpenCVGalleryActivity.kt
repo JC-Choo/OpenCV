@@ -14,10 +14,7 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import dev.chu.opencv.databinding.ActivityOpencvGalleryBinding
-import dev.chu.opencv.util.TAG
-import dev.chu.opencv.util.click
-import dev.chu.opencv.util.hasPermissions
-import dev.chu.opencv.util.toast
+import dev.chu.opencv.util.*
 import org.opencv.android.BaseLoaderCallback
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
@@ -126,7 +123,7 @@ class OpenCVGalleryActivity : AppCompatActivity() {
     }
 
     private fun requestNecessaryPermissions(vararg permission: String) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (isUpAndroid23()) {
             requestPermissions(
                 permission,
                 WRITE_STORAGE_PERMISSION_REQUEST_CODE
@@ -183,19 +180,19 @@ class OpenCVGalleryActivity : AppCompatActivity() {
     }
 
     private fun showDialogForPermission(msg: String) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            AlertDialog.Builder(this).apply {
-                setTitle("알림")
-                setMessage(msg)
-                setCancelable(false)
-                setPositiveButton("예") { _, _ ->
+        if (isUpAndroid23()) {
+            showAlert(getString(R.string.notice),
+                msg,
+                getString(R.string.ok),
+                getString(R.string.cancel),
+                { _, _ ->
                     requestPermissions(
                         arrayOf(Manifest.permission.CAMERA),
                         WRITE_STORAGE_PERMISSION_REQUEST_CODE
                     )
-                }
-                setNegativeButton("아니오") { _, _ -> finish() }
-            }.create().show()
+                },
+                { _, _ -> finish() }
+            ).create().show()
         } else {
             toast("버전이 낮아 권한 필요 없음")
         }

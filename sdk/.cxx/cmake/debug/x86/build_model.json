@@ -5,9 +5,9 @@
     "environmentVariables": []
   },
   "cmake": {
-    "cmakeArtifactsBaseFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
-    "cmakeServerLogFile": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86\\cmake_server_log.txt",
-    "cmakeWrappingBaseFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cxx\\debug\\x86",
+    "cmakeArtifactsBaseFolder": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
+    "cmakeServerLogFile": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86\\cmake_server_log.txt",
+    "cmakeWrappingBaseFolder": "D:\\Android\\OpenCV\\sdk\\.cxx\\cxx\\debug\\x86",
     "effectiveConfiguration": {
       "name": "traditional-android-studio-cmake-environment",
       "description": "Composite reified CMakeSettings configuration",
@@ -15,13 +15,13 @@
       "inheritEnvironments": [
         "ndk"
       ],
-      "buildRoot": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
+      "buildRoot": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
       "cmakeToolchain": "C:\\Users\\cnwlc\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
       "cmakeExecutable": "C:\\Users\\cnwlc\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
       "variables": [
         {
           "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab\\x86\\prefab"
+          "value": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab\\x86\\prefab"
         },
         {
           "name": "CMAKE_BUILD_TYPE",
@@ -57,7 +57,7 @@
         },
         {
           "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
-          "value": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\build\\intermediates\\cmake\\debug\\obj\\x86"
+          "value": "D:\\Android\\OpenCV\\sdk\\build\\intermediates\\cmake\\debug\\obj\\x86"
         },
         {
           "name": "CMAKE_MAKE_PROGRAM",
@@ -78,14 +78,14 @@
       ]
     }
   },
-  "cxxBuildFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
+  "cxxBuildFolder": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
   "info": {
     "abi": "X86",
     "bitness": 32,
     "deprecated": false,
     "default": true
   },
-  "originalCxxBuildFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
+  "originalCxxBuildFolder": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\x86",
   "variant": {
     "buildSystemArgumentList": [
       "-DANDROID_STL\u003dc++_shared"
@@ -106,12 +106,12 @@
         "ninjaExe": "C:\\Users\\cnwlc\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
       },
       "cmakeToolchainFile": "C:\\Users\\cnwlc\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
-      "cxxFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx",
+      "cxxFolder": "D:\\Android\\OpenCV\\sdk\\.cxx",
       "gradleModulePathName": ":sdk",
-      "intermediatesFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\build\\intermediates",
-      "makeFile": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\libcxx_helper\\CMakeLists.txt",
-      "moduleBuildFile": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\build.gradle",
-      "moduleRootFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk",
+      "intermediatesFolder": "D:\\Android\\OpenCV\\sdk\\build\\intermediates",
+      "makeFile": "D:\\Android\\OpenCV\\sdk\\libcxx_helper\\CMakeLists.txt",
+      "moduleBuildFile": "D:\\Android\\OpenCV\\sdk\\build.gradle",
+      "moduleRootFolder": "D:\\Android\\OpenCV\\sdk",
       "ndkDefaultAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
@@ -175,12 +175,12 @@
       "ndkDefaultStl": "LIBCXX_STATIC",
       "ndkVersion": "21.1.6352462",
       "project": {
-        "compilerSettingsCacheFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\.cxx",
-        "cxxFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\.cxx",
+        "compilerSettingsCacheFolder": "D:\\Android\\OpenCV\\.cxx",
+        "cxxFolder": "D:\\Android\\OpenCV\\.cxx",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
-        "rootBuildGradleFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV",
+        "rootBuildGradleFolder": "D:\\Android\\OpenCV",
         "sdkFolder": "C:\\Users\\cnwlc\\AppData\\Local\\Android\\Sdk",
         "isPrefabEnabled": false
       },
@@ -197,7 +197,7 @@
         "SYSTEM": {}
       }
     },
-    "objFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\build\\intermediates\\cmake\\debug\\obj",
+    "objFolder": "D:\\Android\\OpenCV\\sdk\\build\\intermediates\\cmake\\debug\\obj",
     "variantName": "debug",
     "validAbiList": [
       "ARMEABI_V7A",
@@ -205,8 +205,8 @@
       "X86",
       "X86_64"
     ],
-    "prefabDirectory": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab",
+    "prefabDirectory": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab",
     "prefabPackageDirectoryList": []
   },
-  "prefabFolder": "C:\\Users\\cnwlc\\AndroidProject\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab\\x86"
+  "prefabFolder": "D:\\Android\\OpenCV\\sdk\\.cxx\\cmake\\debug\\prefab\\x86"
 }

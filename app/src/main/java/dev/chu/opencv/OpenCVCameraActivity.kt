@@ -1,6 +1,7 @@
 package dev.chu.opencv
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -11,8 +12,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import dev.chu.opencv.databinding.ActivityOpencvCameraBinding
-import dev.chu.opencv.util.TAG
-import dev.chu.opencv.util.toast
+import dev.chu.opencv.util.*
 import org.opencv.android.BaseLoaderCallback
 import org.opencv.android.CameraBridgeViewBase
 import org.opencv.android.LoaderCallbackInterface
@@ -44,7 +44,7 @@ class OpenCVCameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraV
         super.onCreate(savedInstanceState)
 
         @Suppress("DEPRECATION")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if (isUpAndroid30()) {
             window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
             window.setFlags(
@@ -72,7 +72,7 @@ class OpenCVCameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraV
     override fun onStart() {
         super.onStart()
         var isHavingPermission = true
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (isUpAndroid23()) {
             if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(
                     arrayOf(Manifest.permission.CAMERA),
@@ -155,19 +155,19 @@ class OpenCVCameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraV
     }
 
     private fun showDialogForPermission(msg: String) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            AlertDialog.Builder(this).apply {
-                setTitle("알림")
-                setMessage(msg)
-                setCancelable(false)
-                setPositiveButton("예") { _, _ ->
+        if (isUpAndroid23()) {
+            showAlert(getString(R.string.notice),
+                msg,
+                getString(R.string.ok),
+                getString(R.string.cancel),
+                { _, _ ->
                     requestPermissions(
                         arrayOf(Manifest.permission.CAMERA),
                         CAMERA_PERMISSION_REQUEST_CODE
                     )
-                }
-                setNegativeButton("아니오") { _, _ -> finish() }
-            }.create().show()
+                },
+                { _, _ -> finish() }
+            ).create().show()
         } else {
             toast("버전이 낮아 권한 필요 없음")
         }
